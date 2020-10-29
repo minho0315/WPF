@@ -10,31 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace OracleApp
 {
     /// <summary>
-    /// MainWindow.xaml에 대한 상호 작용 논리
+    /// EmpListWindow.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EmpListWindow : Window
     {
-        public MainWindow()
+        public EmpListWindow()
         {
             InitializeComponent();
         }
-
-        private void BtnEmp_Click(object sender, RoutedEventArgs e)
+        private void cmdGetEmployeeList_Click(object sender, RoutedEventArgs e)
         {
-            EmpWindow window = new EmpWindow();
-            window.Show();
-        }
 
-        private void BtnEmpList_Click(object sender, RoutedEventArgs e)
-        {
-            EmpListWindow window = new EmpListWindow();
-            window.Show();
         }
     }
 }

@@ -26,7 +26,28 @@ namespace OracleApp
 
         private void cmdGetEmployee_Click(object sender, RoutedEventArgs e)
         {
+            long id;
+            if(Int64.TryParse(txtID.Text, out id))
+            {
+                try
+                {
+                    gridEmployeeDetails.DataContext = HrDAO.Instance.getEmployee(id);
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show("Error contacting database.");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid ID. ");
+            }
 
+        }
+
+        private void cmdConfirm_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

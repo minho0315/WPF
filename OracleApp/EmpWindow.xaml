@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:OracleApp"
         mc:Ignorable="d"
         Title="EmpWindow" Height="450" Width="800">
+    <Window.Resources>
+        <local:DateConverter x:Key="dateConverter"/>
+    </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -22,7 +25,7 @@
             <Button Click="cmdGetEmployee_Click" Grid.Column="2" Margin="5" Padding="2" IsDefault="True">Get Employee</Button>
         </Grid>
         <Border Grid.Row="1" Padding="7" Margin="7" Background="LightBlue">
-            <Grid>
+            <Grid Name="gridEmployeeDetails">
                 <Grid.ColumnDefinitions >
                     <ColumnDefinition Width="Auto"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
@@ -38,32 +41,37 @@
                     <RowDefinition Height="Auto"></RowDefinition>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Column="0" Grid.Row="0" Margin="5">First Name:</TextBlock>
-                <TextBox Grid.Column="1" Grid.Row="0" Margin="5"  TextAlignment="Center"/>
+                <TextBox Grid.Column="1" Grid.Row="0" Margin="5"  TextAlignment="Center" Text="{Binding Path=First_name}"/>
                 <TextBlock Grid.Column="2" Grid.Row="0" Margin="5">Last Name:</TextBlock>
-                <TextBox Grid.Column="3" Grid.Row="0" Margin="5"  TextAlignment="Center"/>
+                <TextBox Grid.Column="3" Grid.Row="0" Margin="5"  TextAlignment="Center" Text="{Binding Path=Last_name}"/>
 
                 <TextBlock Grid.Column="0" Grid.Row="1" Margin="5">Email:</TextBlock>
-                <TextBox Grid.Column="1" Grid.Row="1"  Margin="5" TextAlignment="Center"/>
+                <TextBox Grid.Column="1" Grid.Row="1"  Margin="5" TextAlignment="Center" Text="{Binding Path=Email}"/>
                 <TextBlock Grid.Column="2" Grid.Row="1" Margin="5">Phone Number:</TextBlock>
-                <TextBox Grid.Column="3" Grid.Row="1"  Margin="5" TextAlignment="Center"/>
+                <TextBox Grid.Column="3" Grid.Row="1"  Margin="5" TextAlignment="Center" Text="{Binding Path=Phone_number}"/>
 
                 <TextBlock Grid.Column="0" Grid.Row="2" Margin="5">Hire Date:</TextBlock>
-                <TextBox Grid.Column="1" Grid.Row="2"  Margin="5" TextAlignment="Center"/>
+                <!--<TextBox Grid.Column="1" Grid.Row="2"  Margin="5" TextAlignment="Center" 
+                         Text="{Binding Path=Hire_date, StringFormat=d}"/>-->
+                <TextBox Grid.Column="1" Grid.Row="2"  Margin="5" TextAlignment="Center" 
+                         Text="{Binding Path=Hire_date, Converter={StaticResource dateConverter}}"/>
                 <TextBlock Grid.Column="2" Grid.Row="2" Margin="5">Job ID:</TextBlock>
-                <TextBox Grid.Column="3" Grid.Row="2" Margin="5" TextAlignment="Center"/>
+                <TextBox Grid.Column="3" Grid.Row="2" Margin="5" TextAlignment="Center" Text="{Binding Path=Job_id}"/>
 
                 <TextBlock Grid.Column="0" Grid.Row="3" Margin="5">Salary:</TextBlock>
-                <TextBox Grid.Column="1" Grid.Row="3"  Margin="5" TextAlignment="Center"/>
+                <TextBox Grid.Column="1" Grid.Row="3"  Margin="5" TextAlignment="Center" Text="{Binding Path=Salary}"/>
                 <TextBlock Grid.Column="2" Grid.Row="3" Margin="5">Commission PT:</TextBlock>
-                <TextBox Grid.Column="3" Grid.Row="3"  Margin="5" TextAlignment="Center"/>
+                <TextBox Grid.Column="3" Grid.Row="3"  Margin="5" TextAlignment="Center" Text="{Binding Path=Commission_pct}"/>
 
                 <TextBlock Grid.Column="0" Grid.Row="4" Margin="5">Manager ID:</TextBlock>
-                <TextBox Grid.Column="1" Grid.Row="4"  Margin="5" TextAlignment="Center"/>
+                <TextBox Grid.Column="1" Grid.Row="4"  Margin="5" TextAlignment="Center" Text="{Binding Path=Manger_id}"/>
                 <TextBlock Grid.Column="2" Grid.Row="4" Margin="5">Department ID:</TextBlock>
-                <TextBox Grid.Column="3" Grid.Row="4"  Margin="5" TextAlignment="Center"/>
+                <TextBox Grid.Column="3" Grid.Row="4"  Margin="5" TextAlignment="Center" Text="{Binding Path=Department_id}"/>
 
-
-                <Button Grid.Column="3" Grid.Row="5" HorizontalAlignment="Right" Margin="5" >확 인</Button>
+                <DockPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="4">
+                    <Button Click="cmdConfirm_Click" HorizontalAlignment="Right" 
+                            DockPanel.Dock="Right" Margin="5" Padding="2" >확 인</Button>
+                </DockPanel>
             </Grid>
         </Border>
     </Grid>
