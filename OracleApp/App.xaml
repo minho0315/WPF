@@ -4,6 +4,6 @@
              xmlns:local="clr-namespace:OracleApp"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <local:DateConverter x:Key="dateConverter"/>
     </Application.Resources>
 </Application>

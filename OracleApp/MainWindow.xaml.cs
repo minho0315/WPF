@@ -36,5 +36,11 @@ namespace OracleApp
             EmpListWindow window = new EmpListWindow();
             window.Show();
         }
+
+        private void BtnEmpDataGrid_Click(object sender, RoutedEventArgs e)
+        {
+            EmpDataGrid window = new EmpDataGrid();
+            window.Show();
+        }
     }
 }

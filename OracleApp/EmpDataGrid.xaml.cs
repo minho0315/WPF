@@ -15,19 +15,13 @@ using System.Windows.Shapes;
 namespace OracleApp
 {
     /// <summary>
-    /// EmpListWindow.xaml에 대한 상호 작용 논리
+    /// DataGrid.xaml에 대한 상호 작용 논리
     /// </summary>
-    public partial class EmpListWindow : Window
+    public partial class EmpDataGrid : Window
     {
-        private ICollection<Employee> employees;
-        public EmpListWindow()
+        public EmpDataGrid()
         {
             InitializeComponent();
-        }
-        private void cmdGetEmployees_Click(object sender, RoutedEventArgs e)
-        {
-            employees = HrDAO.Instance.getEmployeeList();
-            lstEmployees.ItemsSource = employees;
         }
     }
 }
