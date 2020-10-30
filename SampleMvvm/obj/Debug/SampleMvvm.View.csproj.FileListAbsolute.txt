@@ -1,0 +1,14 @@
+C:\Users\Administrator\source\repos\WPF\SampleMvvm\bin\Debug\SampleMvvm.exe.config
+C:\Users\Administrator\source\repos\WPF\SampleMvvm\bin\Debug\SampleMvvm.exe
+C:\Users\Administrator\source\repos\WPF\SampleMvvm\bin\Debug\SampleMvvm.pdb
+C:\Users\Administrator\source\repos\WPF\SampleMvvm\obj\Debug\MainWindow.g.cs
+C:\Users\Administrator\source\repos\WPF\SampleMvvm\obj\Debug\App.g.cs
+C:\Users\Administrator\source\repos\WPF\SampleMvvm\obj\Debug\SampleMvvm_MarkupCompile.cache
+C:\Users\Administrator\source\repos\WPF\SampleMvvm\obj\Debug\SampleMvvm_MarkupCompile.lref
+C:\Users\Administrator\source\repos\WPF\SampleMvvm\obj\Debug\MainWindow.baml
+C:\Users\Administrator\source\repos\WPF\SampleMvvm\obj\Debug\SampleMvvm.g.resources
+C:\Users\Administrator\source\repos\WPF\SampleMvvm\obj\Debug\SampleMvvm.Properties.Resources.resources
+C:\Users\Administrator\source\repos\WPF\SampleMvvm\obj\Debug\SampleMvvm.View.csproj.GenerateResource.cache
+C:\Users\Administrator\source\repos\WPF\SampleMvvm\obj\Debug\SampleMvvm.View.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\WPF\SampleMvvm\obj\Debug\SampleMvvm.exe
+C:\Users\Administrator\source\repos\WPF\SampleMvvm\obj\Debug\SampleMvvm.pdb
